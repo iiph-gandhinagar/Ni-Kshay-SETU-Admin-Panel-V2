@@ -1,0 +1,26 @@
+diff --git a/node_modules/mantine-datatable/dist/index.d.ts b/node_modules/mantine-datatable/dist/index.d.ts
+index ff6446e..ecf1366 100644
+--- a/node_modules/mantine-datatable/dist/index.d.ts
++++ b/node_modules/mantine-datatable/dist/index.d.ts
+@@ -1,5 +1,5 @@
++import { CheckboxProps, CollapseProps, MantineColor, MantineLoader, MantineShadow, MantineSize, MantineStyleProp, MantineTheme, ScrollAreaProps, StylesRecord, TableProps } from '@mantine/core';
+ import * as react from 'react';
+-import { MantineTheme, MantineStyleProp, MantineSize, MantineColor, MantineLoader, CollapseProps, CheckboxProps, StylesRecord, MantineShadow, ScrollAreaProps, TableProps } from '@mantine/core';
+ 
+ type DataTableColumnTextAlign = 'left' | 'center' | 'right';
+ 
+@@ -286,7 +286,7 @@ type DataTablePaginationProps = ({
+      * Current page number (1-based).
+      * If provided, a pagination component is shown.
+      */
+-    page: number;
++    page?: number;
+     /**
+      * Callback fired after page change.
+      * Receives the new page number as argument.
+@@ -925,4 +925,4 @@ declare function getValueAtPath<T>(obj: T, path: keyof T | (string & NonNullable
+  */
+ declare function getRecordId<T>(record: T, idAccessor: keyof T | (string & NonNullable<unknown>) | ((record: T) => React.Key)): unknown;
+ 
+-export { DataTable, type DataTableCellClickHandler, type DataTableColumn, type DataTableColumnGroup, type DataTableColumnTextAlign, type DataTableColumnToggle, type DataTableDefaultColumnProps, type DataTableEmptyStateProps, type DataTableOuterBorderProps, type DataTablePaginationProps, type DataTableProps, type DataTableRowClickHandler, type DataTableRowExpansionCollapseProps, type DataTableRowExpansionProps, type DataTableSelectionProps, type DataTableSelectionTrigger, type DataTableSortProps, type DataTableSortStatus, type DataTableVerticalAlign, type WithOptionalProperty, type WithRequiredProperty, differenceBy, getRecordId, getValueAtPath, humanize, uniqBy, useDataTableColumns };
++export { DataTable, differenceBy, getRecordId, getValueAtPath, humanize, uniqBy, useDataTableColumns, type DataTableCellClickHandler, type DataTableColumn, type DataTableColumnGroup, type DataTableColumnTextAlign, type DataTableColumnToggle, type DataTableDefaultColumnProps, type DataTableEmptyStateProps, type DataTableOuterBorderProps, type DataTablePaginationProps, type DataTableProps, type DataTableRowClickHandler, type DataTableRowExpansionCollapseProps, type DataTableRowExpansionProps, type DataTableSelectionProps, type DataTableSelectionTrigger, type DataTableSortProps, type DataTableSortStatus, type DataTableVerticalAlign, type WithOptionalProperty, type WithRequiredProperty };
